@@ -1,0 +1,37 @@
+<article>
+    <form [formGroup]="checkoutForm" (ngSubmit)="search()" ngNativeValidate>
+        <section>
+            <h1>Encrypt/Decrypt App</h1>
+
+            <div id="type-of-search-selection">
+                <div>
+                    <span>
+                        <input type="radio" id="encrypt" name="typeOfSearch" formControlName="typeOfSearch"
+                            value="encrypt" required>
+                        <label for="encrypt">Encrypt</label>
+                    </span>
+
+                    <span>
+                        <input type="radio" id="decrypt" name="typeOfSearch" formControlName="typeOfSearch"
+                            value="decrypt">
+                        <label for="decrypt">Decrypt</label>
+                    </span>
+                </div>
+            </div>
+
+            <div id="fields">
+                <div>
+                    <input type="text" id="data" formControlName="data" placeholder="Your text" required>
+                </div>
+
+                <div>
+                    <input type="text" id="key" formControlName="key" placeholder="Key" required>
+                </div>
+            </div>
+
+            <div id="submit">
+                <input type="submit" value="Search">
+            </div>
+        </section>
+    </form>
+</article>
